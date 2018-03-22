@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Autodetect JAVA_HOME if not defined
+. /usr/lib/bigtop-utils/bigtop-detect-javahome
+
+export PYSPARK_PYTHON=${PYSPARK_PYTHON:-python}
+
+exec /usr/lib/spark2/bin/pyspark "$@"
